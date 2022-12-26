@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a098260c-7463-41ee-b4eb-83fbfdfd8c7e}</ProjectGuid>
-    <RootNamespace>Solution</RootNamespace>
+    <ProjectGuid>{191926c7-bed8-4786-9c8a-a9190f07bb7b}</ProjectGuid>
+    <RootNamespace>PrintfFunction</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,6 +128,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Solution\Header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
