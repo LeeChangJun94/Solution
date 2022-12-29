@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bit_Operator", "Bit_Operato
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Overflow_Underflow", "Overflow_Underflow\Overflow_Underflow.vcxproj", "{EFFD23A1-DF9A-4CB2-8A47-522C5AC35CBE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Conditional_Statement", "Conditional_Statement\Conditional_Statement.vcxproj", "{8AD554D8-47BE-42BD-B51A-49B179564528}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{EFFD23A1-DF9A-4CB2-8A47-522C5AC35CBE}.Release|x64.Build.0 = Release|x64
 		{EFFD23A1-DF9A-4CB2-8A47-522C5AC35CBE}.Release|x86.ActiveCfg = Release|Win32
 		{EFFD23A1-DF9A-4CB2-8A47-522C5AC35CBE}.Release|x86.Build.0 = Release|Win32
+		{8AD554D8-47BE-42BD-B51A-49B179564528}.Debug|x64.ActiveCfg = Debug|x64
+		{8AD554D8-47BE-42BD-B51A-49B179564528}.Debug|x64.Build.0 = Debug|x64
+		{8AD554D8-47BE-42BD-B51A-49B179564528}.Debug|x86.ActiveCfg = Debug|Win32
+		{8AD554D8-47BE-42BD-B51A-49B179564528}.Debug|x86.Build.0 = Debug|Win32
+		{8AD554D8-47BE-42BD-B51A-49B179564528}.Release|x64.ActiveCfg = Release|x64
+		{8AD554D8-47BE-42BD-B51A-49B179564528}.Release|x64.Build.0 = Release|x64
+		{8AD554D8-47BE-42BD-B51A-49B179564528}.Release|x86.ActiveCfg = Release|Win32
+		{8AD554D8-47BE-42BD-B51A-49B179564528}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
