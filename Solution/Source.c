@@ -3,63 +3,87 @@
 
 void main()
 {
-	/* 2022-12-29
+	/* 2022-12-30
 
-		형 변환이란?
-		서로 다른 자료형을 가지고 있는 변수끼리 연산이 이루어질 때 기존에 저장했던 자료형을 다른 자료형으로 변환하는 과정
+		표준 출력 함수로 실수를 출력할 때 4 byte 크기의 실수형 자료형은 소수점 이하 6자리까지만 표기한다.
+		8 byte 크기의 실수형 자료형은 소수점 이하 15자리까지만 표기한다.
+	
+		소수점 이하의 값은 정확하지만, 소수점 이상의 값은 반올림하여 표현하므로 정확하게 표기되지 않습니다.
 
-		sizeof() 연산자란?
-		피연산자의 크기를 바이트 단위로 변환하는 연산자
+		부동 소수점 오차
+		무한소수, 순한소수의 경우 가수부가 표현할 수 있는 비트 수를 넘어가게 되면 손실되는 부분이 생겨서 오차가 발생하는 것
 
-		printf("char 자료형의 크기 : %d\n", sizeof(char));
-		printf("short 자료형의 크기 : %d\n", sizeof(short));
-		printf("int 자료형의 크기 : %d\n", sizeof(int));
-		printf("long 자료형의 크기 : %d\n", sizeof(long));
-		printf("float 자료형의 크기 : %d\n", sizeof(float));
-		printf("double 자료형의 크기 : %d\n", sizeof(double));
-		printf("long double 자료형의 크기 : %d\n", sizeof(long double));
+		float 23 bit
 
-		암묵적 형 변환이란?
-		서로 다른 자료형으로 연산이 이루어질 떄 자료형의 크기가 큰 자료형으로 변환되는 과정
+		float value = 6.25f;
+		double decimal = 3.11;
 
+		// IEEE 754
+		//    float			|			double
+		// 부호 지수  가수	|	부호		지수		가수
+		// [1]  [8]  [23]	|	[1]		[11]	[52]
+		printf("value의 값은 : %f\n", value);
+		printf("decimal의 값은 : %.16lf\n", decimal);
 
-		// 대입 연산 과정 시 발생하는 암묵적 형 변환
-		int integer = 10;
-		float result = integer;
+		switch 문
+		어떤 결과에 따라 그 결과부터 실행되는 명령문
 
-		printf("result 변수의 값 : %f\n", result);
+		break 문이란?
+		특정한 지점에서 분기를 탈출하는 제어문
+		
+		switch 문에는 조건식으로 실수형 변수와 실수형 상수를 사용할 수 없다.
 
-		float data = 3.678;
-		int memory = data;
+		char alphabet = 'A';
+		int data = 0;
+		float variable = 8.75;
 
-		// 표현범위가 작은 데이터에 표현범위가 큰 데이터를 저장하게 되면 암묵적으로 데이터 손실이 발생한다.
-		printf("memory 변수의 값 : %d\n", memory);
+		// switch 문은 해당 조건이 완료되었을 때, break 문이 없으면 나머지 밑에 있는 case 문 까지 계속 실행시키다가 종료한다.
+		switch (alphabet) {
+			case 0: printf("마을 이동\n");
+				break;
+			case 1: printf("던전 이동\n");
+				break;
+			case 2: printf("낚시터 이동\n");
+				break;
+			default: printf("잘못된 값이 들어왔습니다.\n");
+				break;
+		}
 
-		정수의 승격
-		char box1 = 10;
-		short box2 = 20;
+		반복문이란?
+		프로그램 내에서 특정한 작업을 반복적으로 수행하는 명령문입니다.
 
-		printf("box1과 box2를 연산한 결과 : %d\n", box1 + box2);
-		printf("box1과 box2를 연산한 크기 : %d\n", sizeof(box1 + box2));
+		증감 연산자
+		피연산자를 하나씩 증가시키거나 감소시킬 때 사용하는 연산자입니다.
 
-		피연산자의 자료형 불일치로 발생하는 자동 형 변환
-		float number = 2.93f + 14;
+		전위 증감 연산자
+		변수의 값을 증감시킨 후에 연산을 수행한다.
 
-		printf("number의 변수의 값 : %f", number);
+		int temp = 0;
 
-		명시적 형 변환이란?
-		연산이 이루어지기 전에 사용자가 직접 자료형을 변환하는 과정
+		int memory = ++temp;
 
+		printf("memory의 값 : %d\n", memory);
+
+		memory = memory--;
+
+		printf("memory의 값 : %d\n", memory);
+
+		후위 증감 연산자
+		연산을 수행한 다음 변수의 값을 증감시킨다.
+
+		int count = 0;
+
+		int result = count++;
+
+		printf("result의 값 : %d\n", result);
+
+		result = count--;
+
+		printf("result의 값 : %d\n", result);
 
 	-------------------------------*/
 	
-	int health = 5;
-	int damage = 2;
 
-	float result = (float)health / damage;
 
-	// 정수형 변수끼리 연산을 수행하게 되면 정수의 결과값만 가질 수 있다.
-	printf("result 변수의 값 = %f", result);
-	
 
 }
