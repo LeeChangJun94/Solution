@@ -3,45 +3,49 @@
 
 void main()
 {
-	/* 2023-01-03
+	/* 2023-01-04
 
-		while문이란?
-		특정 조건을 만족할 때까지 계속해서 주어진 명령문을 실행하는 반복문
+		scanf함수
+		표준 입력 함수로, 여러 종류의 데이터를 다양한 서식에 맞춰 입력해주는 함수
 
+		char alphabet = 'A';
 		int value = 0;
+		float decimal = 0.0;
 
-		while (value < 3) {
-			value++;
-			printf("Game\n");
-		}
 
-		do while문이란?
-		조건과 상관없이 한 번의 작업을 수행한 다음 조건에 따라 명령문을 실행하는 반복문
+		scanf_s("%d,%c,%f", &value, &alphabet, 1, &decimal);
+		// 표준 입력 함수는 입력을 수행할 때까지 다음 작업으로 넘어갈 수 없다.
 
-		do {
-			printf("Unity Engine\n");
-		} while (0);
+		printf("alphabet의 값 : %c\n", alphabet);
+		printf("value의 값 : %d\n", value);
+		printf("decimal의 값 : %f\n", decimal);
 
-		continue문이란?
-		해당 조건문만 실행하지 않고, 반복문은 이어서 실행하는 제어문
+		포인터란?
+		메모리의 주소 값을 저장할 수 있는 변수
 
-		for (int i = 1; i <= 5; i++) {
-			if (i == 3) {
-				continue;
-			}
-			printf("%d  ", i);
-		}
-
-		주소 연산자
-		변수의 주소 값을 반환하는 연산자
-
-		데이터의 주소값은 해당 데이터가 저장된 메모리의 시작 주소를 의미하며, 메모리의 공간은 1 byte크기로 나누어 표현
+		자료형 * 포인터 변수
 
 	-------------------------------*/
 	
-	int data = 100;
+	int integer = 100;
+	int data = 300;
 
-	// 주소를 출력하는 서식 지정자 %p
-	printf("data 변수의 주소 : %p", &data);
-	// 000000221815FA74
+
+	int* ptr = &integer;
+
+
+
+	// 포인터 변수도 자신의 메모리 공간을 가지고 있으며, 포인터 변수에 대한 변수의 주소를 저장하게 되면 해당 변수의 시작 주소를 가리킨다.
+
+	printf("integer 변수의 주소 : %p\n", &integer);
+	printf("ptr 변수의 값 : %p\n", ptr);
+	printf("ptr 변수의 고유 주소 : %p\n", &ptr);
+
+	ptr = &data;
+
+	// 포인터 변수가 가리키는 메모리 공간의 자료형은 알 수 없으므로 포인터가 가리키는 메모리의 자료형을 선언해주어야 한다.
+
+	printf("data 변수의 주소 : %p\n", &data);
+	printf("ptr 변수의 값 : %p\n", ptr);
+
 }
